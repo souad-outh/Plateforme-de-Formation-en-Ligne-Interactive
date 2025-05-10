@@ -1,0 +1,22 @@
+User-agent: *
+Disallow: /login
+Disallow: /register
+Disallow: /admin
+Disallow: /profile
+Disallow: /dashboard
+Disallow: /api/
+Disallow: /storage/
+Disallow: /face/
+Disallow: /two-factor-challenge
+Disallow: /legal/
+
+# Allow specific directories
+Allow: /public/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /about
+Allow: /courses
+
+# Sitemap
+Sitemap: https://example.com/sitemap.xml

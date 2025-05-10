@@ -1,0 +1,309 @@
+/**
+ * Face Recognition System Styles
+ */
+
+.face-recognition-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f8fafc;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.face-video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    background-color: #000;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.face-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.face-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.face-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.face-button {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.face-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.face-button-primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.face-button-primary:hover:not(:disabled) {
+    background-color: #2563eb;
+}
+
+.face-button-success {
+    background-color: #10b981;
+    color: white;
+}
+
+.face-button-success:hover:not(:disabled) {
+    background-color: #059669;
+}
+
+.face-button-danger {
+    background-color: #ef4444;
+    color: white;
+}
+
+.face-button-danger:hover:not(:disabled) {
+    background-color: #dc2626;
+}
+
+.face-button-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.face-button-secondary:hover:not(:disabled) {
+    background-color: #d1d5db;
+}
+
+.face-status {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.status-info {
+    background-color: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+.status-success {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.status-warning {
+    background-color: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fef3c7;
+}
+
+.status-error {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.face-progress {
+    margin-top: 1rem;
+    height: 0.5rem;
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.face-progress-bar {
+    height: 100%;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.face-instructions {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f3f4f6;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
+
+.face-instructions h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+}
+
+.face-instructions ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.face-instructions li {
+    margin-bottom: 0.25rem;
+}
+
+/* Face registration specific styles */
+.face-registration-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.face-registration-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.face-registration-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.face-registration-header p {
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+.face-registration-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.face-registration-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.face-registration-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background-color: #e5e7eb;
+    z-index: 0;
+}
+
+.face-registration-step.active:not(:last-child)::after {
+    background-color: #3b82f6;
+}
+
+.face-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #e5e7eb;
+    color: #6b7280;
+    border-radius: 9999px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.face-registration-step.active .face-step-number {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.face-registration-step.completed .face-step-number {
+    background-color: #10b981;
+    color: white;
+}
+
+.face-step-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.face-registration-step.active .face-step-label {
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* Verification during exam styles */
+.exam-verification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.exam-verification-modal {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.exam-verification-header {
+    padding: 1rem;
+    background-color: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.exam-verification-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.exam-verification-body {
+    padding: 1.5rem;
+}
+
+.exam-verification-footer {
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
