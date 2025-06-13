@@ -118,5 +118,5 @@ Distribué sous licence MIT. Voir `LICENSE` pour plus d'informations.
 
 ## Contact
 
-Squad Outharout - [souad.outh@example.com](mailto:souad.outh@example.com)  
+Souad Outharout - [outharoutsouad@gmail.com](mailto:outharoutsouad@gmail.com)  
 Lien du projet : [https://github.com/souad-outh/Plateforme-de-Formation-en-Ligne-Interactive](https://github.com/souad-outh/Plateforme-de-Formation-en-Ligne-Interactive)
